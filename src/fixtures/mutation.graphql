@@ -1,0 +1,4 @@
+type Mutation {
+  createMovie(movie: inputMovie): Movie
+  updateMovie(movie: inputMovie): Movie
+}

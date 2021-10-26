@@ -1,0 +1,39 @@
+---
+extends:
+  - airbnb-base
+
+plugins:
+  - import
+
+env:
+  node: true
+  es6: true
+
+rules:
+  import/no-unresolved: [2, { commonjs: true, amd: true }]
+  object-curly-spacing: [2, "always"]
+  semi: [2, "always"]
+  arrow-parens: [2, "as-needed"]
+  key-spacing: ["error", { singleLine: { beforeColon: true, afterColon: true }, multiLine: { beforeColon: true, afterColon: true }, align: { beforeColon: true, afterColon: true, on: "colon" }}]
+  comma-dangle: ["error", "only-multiline"]
+  space-before-function-paren: ["error", "always"]
+  class-methods-use-this: off
+  max-len: off
+  camelcase: off
+  no-underscore-dangle: off
+  prefer-rest-params: off
+  global-require: off
+  no-cond-assign: off
+  import/no-dynamic-require: off
+  func-names: off
+  no-param-reassign: off
+  consistent-return: off
+  import/prefer-default-export: off
+  no-return-assign: off
+  no-restricted-syntax: off
+  linebreak-style: off
+
+
+parserOptions:
+  ecmaVersion: 8
+  sourceType: module

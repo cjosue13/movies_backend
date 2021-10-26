@@ -1,0 +1,16 @@
+type Movie implements Node, Timestamp {
+  id: ID!
+  title: String
+  year: DateTime
+  description: String
+  image: String
+  Created_At   : DateTime
+  Updated_At   : DateTime
+}
+
+input inputMovie {
+  title: String
+  year: DateTime
+  description: String
+  image: String
+}
