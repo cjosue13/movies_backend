@@ -11,9 +11,10 @@ const Mutation = utils.import.mutationSchema();
 
 // Custom modules
 const Movie = utils.import.all('movies');
+const BudgetDetail = utils.import.all('budgetdetails');
 
 export default makeExecutableSchema({
-  typeDefs  : [Schema, Query, Mutation, Movie.schema],
-  resolvers : _.merge(date, Movie.resolver),
+  typeDefs  : [Schema, Query, Mutation, Movie.schema, BudgetDetail.schema],
+  resolvers : _.merge(date, Movie.resolver, BudgetDetail.resolver),
   logger    : { log : e => logger.log('info', e.stack) },
 });

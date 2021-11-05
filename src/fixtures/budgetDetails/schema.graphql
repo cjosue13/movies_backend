@@ -1,0 +1,20 @@
+type BudgetDetail implements Node, Timestamp {
+  id: ID!
+  bd_description: String
+  bd_date: DateTime
+  bd_paymentType: String
+  bd_paymentAmount: String
+  bd_type: String
+  usu_uid: String
+  Created_At: DateTime
+  Updated_At: DateTime
+}
+
+input inputBudgetDetail {
+  bd_description: String
+  bd_date: DateTime
+  bd_paymentType: String
+  bd_paymentAmount: String
+  bd_type: String
+  usu_uid: String
+}
