@@ -1,4 +1,5 @@
 type Query {
   getMovies: [Movie]
   getBudgetDetails: [BudgetDetail]
+  getBudgetDetailsbyUser(usu_uid: String): [BudgetDetail]
 }
