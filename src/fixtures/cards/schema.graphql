@@ -1,0 +1,19 @@
+type Card implements Node, Timestamp {
+  id: ID!
+  usu_uid: String
+  name: String
+  type: String
+  balance: Float
+  description: String
+  Budgets : [BudgetDetail]
+  Created_At: DateTime
+  Updated_At: DateTime
+}
+
+input inputCard {
+  usu_uid: String
+  name: String
+  type: String
+  balance: Float
+  description: String
+}

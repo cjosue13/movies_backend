@@ -10,11 +10,10 @@ const Query = utils.import.querySchema();
 const Mutation = utils.import.mutationSchema();
 
 // Custom modules
-const Movie = utils.import.all('movies');
 const BudgetDetail = utils.import.all('budgetdetails');
-
+const Card = utils.import.all('cards');
 export default makeExecutableSchema({
-  typeDefs  : [Schema, Query, Mutation, Movie.schema, BudgetDetail.schema],
-  resolvers : _.merge(date, Movie.resolver, BudgetDetail.resolver),
+  typeDefs  : [Schema, Query, Mutation, BudgetDetail.schema, Card.schema],
+  resolvers : _.merge(date, BudgetDetail.resolver, Card.resolver),
   logger    : { log : e => logger.log('info', e.stack) },
 });

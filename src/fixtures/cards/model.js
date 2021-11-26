@@ -2,13 +2,13 @@ import checkit from 'checkit';
 import { bookshelf } from '../../helpers/database';
 import Entity from '../../helpers/entity';
 
-export default class Movies extends bookshelf.Model {
+export default class Card extends bookshelf.Model {
   get tableName () {
-    return 'movies';
+    return 'cards';
   }
 
   initialize () {
-    this.entity = new Entity(Movies);
+    this.entity = new Entity(Card);
 
     this.on('saving', this.validate);
 
@@ -20,16 +20,17 @@ export default class Movies extends bookshelf.Model {
   get validations () {
     return {
       insert : {
-        title       : ['required'],
-        year        : ['required'],
+        usu_uid     : ['required'],
+        name        : ['required'],
+        type        : ['required'],
         description : ['required'],
-        image       : ['required'],
+
       },
       update : {
-        title       : ['required'],
-        year        : ['required'],
+        usu_uid     : ['required'],
+        name        : ['required'],
+        type        : ['required'],
         description : ['required'],
-        image       : ['required'],
       },
     };
   }

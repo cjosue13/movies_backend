@@ -20,20 +20,22 @@ export default class BudgetDetail extends bookshelf.Model {
   get validations () {
     return {
       insert : {
-        usu_uid          : ['required'],
         bd_description   : ['required'],
         bd_paymentType   : ['required'],
         bd_paymentAmount : ['required'],
         bd_date          : ['required'],
         bd_type          : ['required'],
+        paid             : ['required'],
+        card             : ['required'],
       },
       update : {
-        usu_uid          : ['required'],
         bd_description   : ['required'],
         bd_paymentType   : ['required'],
         bd_paymentAmount : ['required'],
         bd_date          : ['required'],
         bd_type          : ['required'],
+        paid             : ['required'],
+        card             : ['required'],
       },
     };
   }

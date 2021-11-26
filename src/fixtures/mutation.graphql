@@ -1,6 +1,6 @@
 type Mutation {
-  createMovie(movie: inputMovie): Movie
-  updateMovie(movie: inputMovie): Movie
   createBudgetDetail(budgetDetail: inputBudgetDetail): BudgetDetail
   updateBudgetDetail(budgetDetail: inputBudgetDetail): BudgetDetail
+  createCard(card: inputCard): Card
+  updateCard(card: inputCard): Card
 }

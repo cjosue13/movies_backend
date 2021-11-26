@@ -1,17 +1,21 @@
+import { getCardById } from '../cards/loader';
 import {
   createBudgetDetail,
   getAllBudgetDetails,
-  getBudgetDetailsbyUser,
+  getBudgetDetailsbyCard,
   updateBudgetDetail,
 } from './loader';
 
 export default {
+  BudgetDetail : {
+    Card : BudgetDetail => getCardById(BudgetDetail.card)
+  },
   Query : {
     getBudgetDetails () {
       return getAllBudgetDetails();
     },
-    getBudgetDetailsbyUser (_, { usu_uid }) {
-      return getBudgetDetailsbyUser(usu_uid);
+    getBudgetDetailsbyCard (_, { card }) {
+      return getBudgetDetailsbyCard(card);
     },
   },
   Mutation : {

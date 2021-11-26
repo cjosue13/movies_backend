@@ -15,13 +15,13 @@ function getAllBudgetDetails () {
   return BudgetDetail.fetchAll().then(budgetDetail => (budgetDetail && budgetDetail.toJSON()) || null);
 }
 
-function getBudgetDetailsbyUser (usu_uid) {
+function getBudgetDetailsbyCard (card) {
   return BudgetDetail.query(q =>
     q.where({
-      usu_uid,
+      card,
     }))
     .fetchAll()
     .then(budgetDetail => (budgetDetail && budgetDetail.toJSON()) || []);
 }
 
-export { createBudgetDetail, getAllBudgetDetails, updateBudgetDetail, getBudgetDetailsbyUser };
+export { createBudgetDetail, getAllBudgetDetails, updateBudgetDetail, getBudgetDetailsbyCard };

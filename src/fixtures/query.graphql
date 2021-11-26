@@ -1,5 +1,5 @@
 type Query {
-  getMovies: [Movie]
   getBudgetDetails: [BudgetDetail]
-  getBudgetDetailsbyUser(usu_uid: String): [BudgetDetail]
+  getBudgetDetailsbyCard(card: Int): [BudgetDetail]
+  getCardsByUser (usu_uid: String): [Card] 
 }
