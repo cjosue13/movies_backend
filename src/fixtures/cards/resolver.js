@@ -13,7 +13,6 @@ export default {
   },
   Mutation : {
     createCard (_, { card }) {
-      console.log('APSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS');
       return createCard(card);
     },
     updateCard (_, { card }) {

@@ -18,5 +18,5 @@ input inputBudgetDetail {
   bd_paymentAmount: String
   bd_type: String
   paid: String
-  Card: Int
+  card: Int
 }
