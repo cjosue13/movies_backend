@@ -1,6 +1,6 @@
 type Mutation {
   createBudgetDetail(budgetDetail: inputBudgetDetail): BudgetDetail
-  updateBudgetDetail(budgetDetail: inputBudgetDetail): BudgetDetail
+  updateBudgetDetail(input: budgetUpdate): BudgetDetail
   createCard(card: inputCard): Card
   updateCard(card: inputCard): Card
 }

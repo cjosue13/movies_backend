@@ -3,6 +3,7 @@ import {
   createBudgetDetail,
   getAllBudgetDetails,
   getBudgetDetailsbyCard,
+  getBudgetDetailsbyTypeAndUser,
   updateBudgetDetail,
 } from './loader';
 
@@ -17,13 +18,16 @@ export default {
     getBudgetDetailsbyCard (_, { card }) {
       return getBudgetDetailsbyCard(card);
     },
+    getBudgetDetailsbyTypeAndUser (_, { input }) {
+      return getBudgetDetailsbyTypeAndUser(input);
+    }
   },
   Mutation : {
     createBudgetDetail (_, { budgetDetail }) {
       return createBudgetDetail(budgetDetail);
     },
-    updateBudgetDetail (_, { budgetDetail }) {
-      return updateBudgetDetail(budgetDetail);
+    updateBudgetDetail (_, { input }) {
+      return updateBudgetDetail(input);
     },
   },
 };

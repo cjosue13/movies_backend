@@ -2,4 +2,5 @@ type Query {
   getBudgetDetails: [BudgetDetail]
   getBudgetDetailsbyCard(card: Int): [BudgetDetail]
   getCardsByUser (usu_uid: String): [Card] 
+  getBudgetDetailsbyTypeAndUser (input: inputCardType):[BudgetDetail]
 }

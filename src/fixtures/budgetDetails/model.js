@@ -28,15 +28,7 @@ export default class BudgetDetail extends bookshelf.Model {
         paid             : ['required'],
         card             : ['required'],
       },
-      update : {
-        bd_description   : ['required'],
-        bd_paymentType   : ['required'],
-        bd_paymentAmount : ['required'],
-        bd_date          : ['required'],
-        bd_type          : ['required'],
-        paid             : ['required'],
-        card             : ['required'],
-      },
+      update : {},
     };
   }
 

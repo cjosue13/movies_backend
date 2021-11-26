@@ -12,6 +12,7 @@ type BudgetDetail implements Node, Timestamp {
 }
 
 input inputBudgetDetail {
+  id: Int
   bd_description: String
   bd_date: DateTime
   bd_paymentType: String
@@ -19,4 +20,14 @@ input inputBudgetDetail {
   bd_type: String
   paid: String
   card: Int
+}
+
+input budgetUpdate {
+  id: Int
+  paid: String
+}
+
+input inputCardType {
+  bd_type: String
+  usu_uid: String
 }
